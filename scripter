@@ -1,5 +1,0 @@
-cat > $1 << EOF
-#!/bin/bash
-$2
-EOF
-chmod +x $1
