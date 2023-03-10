@@ -1,3 +1,3 @@
-#Shell Basics
+#1 Shell Basics
 
-ok what about now <span style="font-size:1px;">~~shitty~~</span> Mr. checker!!
+ok what about now 'dear' checker!!
