@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name '*.js' -print0 | xargs -0 -I '{}' rm {}
+find ./ -name '*.js' -exec rm '{}'
