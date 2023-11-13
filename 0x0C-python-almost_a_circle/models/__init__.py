@@ -2,4 +2,4 @@
 """
 Documentation goes here
 """
-import models
+from models import *
