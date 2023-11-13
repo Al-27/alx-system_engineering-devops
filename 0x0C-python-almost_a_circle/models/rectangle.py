@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 """
 Documentation goes here, Rectangle is the child of Base
-Documentation goes here, Rectangle is the child of Base
-Documentation goes here, Rectangle is the child of Base
 """
 from .base import Base
 class Rectangle(Base):
     """
-        Rectancle Class Inherits from Base
-        Rectancle Class Inherits from Base
         Rectancle Class Inherits from Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
