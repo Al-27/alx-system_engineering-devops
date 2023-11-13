@@ -2,8 +2,8 @@
 """
 Documentation goes here, Rectangle is the child of Base
 """
-import .base
-class Rectangle(base.Base):
+from .base import Base
+class Rectangle(Base):
     """
         Rectancle Class Inherits from Base
     """
