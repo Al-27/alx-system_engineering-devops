@@ -2,7 +2,7 @@
 """
 Documentation goes here, Rectangle is the child of Base
 """
-base = __import__("base.py")
+import base
 class Rectangle(base.Base):
     """
         Rectancle Class Inherits from Base
