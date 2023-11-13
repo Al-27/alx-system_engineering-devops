@@ -1,0 +1,16 @@
+#!/bin/bash
+
+files="models/base.py,models/__init__.py,models/rectangle.py,models/square.py"
+oldIFS=$IFS
+IFS=,
+for file in $files
+do
+    cat > $file <<-EOF
+#!/usr/bin/python3
+"""
+Documentation goes here
+"""
+EOF
+done
+
+IFS=$oldIFS
