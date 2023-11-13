@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Documentation goes here, Rectangle is the child of Base
+Documentation goes here, Rectangle is the child of Base 
 """
 from .base import Base
 class Rectangle(Base):
@@ -62,11 +62,14 @@ class Rectangle(Base):
         else:
             raise TypeError(Rectangle.errMsg("y"))
      
-    @classmethod
+    
     def errMsg(var, type=0):
+        """
+            ERRMSG
+        """
         eq = ">"
         
-        if var in "xy":
+        if "x" == var or "y" == var:
             eq = ">="
         
         if type :
@@ -106,16 +109,30 @@ class Rectangle(Base):
         """
             blah blah blah
         """
-        if args:
-            funcs = [None, "_Rectangle__width", "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+        if args: 
             i = 0
             for arg in args:
                 if i == 0 : 
                     self.id = arg
+                elif i == 1 :
+                    self.width = arg                    
+                elif i == 2 :
+                    self.height = arg
+                elif i == 3 :
+                    self.x = arg
                 else:
-                    self.__dict__[funcs[i]] = arg
+                    self.y = arg
                 i += 1
-        else:
+        elif kwargs:
             dicBas = "_Rectangle__"
             for key,val in kwargs.items():
-                self.__dict__[f"{dicBas}{key}"] = val
+                if str(key) == "id" : 
+                    self.id = arg
+                elif str(key) == "width" :
+                    self.width = arg                    
+                elif str(key) == "height" :
+                    self.height = arg
+                elif str(key) == "x" :
+                    self.x = arg
+                elif str(key) == "y":
+                    self.y = arg
