@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 """
 Documentation goes here, Rectangle is the child of Base
-Documentation goes here, Rectangle is the child of Base
-Documentation goes here, Rectangle is the child of Base
 """
 from .base import Base
 class Rectangle(Base):
     """
-        Rectancle Class Inherits from Base
-        Rectancle Class Inherits from Base
         Rectancle Class Inherits from Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -84,10 +80,10 @@ class Rectangle(Base):
     height=property(height,height)
     x=property(x,x)
     y=property(y,y)
-    
+    @None
     def area(self):
         return self.__width * self.__height
-    
+    @None
     def display(self):
         for i in range(0, self.__y):
             print()
