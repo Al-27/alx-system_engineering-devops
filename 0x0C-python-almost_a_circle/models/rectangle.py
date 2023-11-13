@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """
 Documentation goes here, Rectangle is the child of Base
+Documentation goes here, Rectangle is the child of Base
+Documentation goes here, Rectangle is the child of Base
 """
 from .base import Base
 class Rectangle(Base):
     """
+        Rectancle Class Inherits from Base
+        Rectancle Class Inherits from Base
         Rectancle Class Inherits from Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -80,20 +84,32 @@ class Rectangle(Base):
     height=property(height,height)
     x=property(x,x)
     y=property(y,y)
-    @None
+    
     def area(self):
+        """
+            blah blah blah
+        """
         return self.__width * self.__height
-    @None
+    
     def display(self):
+        """
+            blah blah blah
+        """
         for i in range(0, self.__y):
             print()
         for i in range(0,self.__height):
             print(" "*self.__x + "#"*self.__width)
     
     def __str__(self):
+        """
+            blah blah blah
+        """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{ self.__height}"
     
     def update(self, *args, **kwargs):
+        """
+            blah blah blah
+        """
         if args:
             funcs = [None, "_Rectangle__width", "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
             i = 0
