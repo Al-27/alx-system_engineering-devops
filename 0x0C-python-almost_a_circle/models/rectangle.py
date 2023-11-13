@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """
 Documentation goes here, Rectangle is the child of Base
+Documentation goes here, Rectangle is the child of Base
+Documentation goes here, Rectangle is the child of Base
 """
 from .base import Base
 class Rectangle(Base):
     """
+        Rectancle Class Inherits from Base
+        Rectancle Class Inherits from Base
         Rectancle Class Inherits from Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -62,6 +66,7 @@ class Rectangle(Base):
         else:
             raise TypeError(Rectangle.errMsg("y"))
      
+    @classmethod
     def errMsg(var, type=0):
         eq = ">"
         
@@ -74,8 +79,6 @@ class Rectangle(Base):
             type = f"{var} must be an integer" 
                 
         return type
-    
-    
     
     width=property(width,width)
     height=property(height,height)
