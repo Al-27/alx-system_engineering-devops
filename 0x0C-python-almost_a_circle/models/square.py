@@ -2,8 +2,8 @@
 """
 Documentation goes here, Square is the child of Rectangle
 """
-import rectangle
-class Square(rectangle.Rectangle):
+from .rectangle import Rectangle
+class Square(Rectangle):
     """
         Square Class inherits from Rectangle
     """
