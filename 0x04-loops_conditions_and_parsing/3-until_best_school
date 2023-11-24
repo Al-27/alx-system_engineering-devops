@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+i=0
+end=10
+until [ $i -ge $end ]; do
+    echo "Best School"
+    i=$(($i+1))
+done

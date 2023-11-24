@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+i=1
+end=10
+while [ $i -le $end ]; do
+    
+    if [ $i == 4 ] 
+    then
+        echo "bad luck"
+    elif [ $i == 8 ]
+    then
+        echo "good luck" 
+    else
+               
+        echo "Best School"        
+    fi
+    
+    i=$(($i+1))
+done

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+i=0
+end=10
+for ((;i < end;i++)) do
+    echo "Best School"
+done

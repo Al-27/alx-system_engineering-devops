@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+i=1
+end=10
+while [ $i -le $end ]; do
+    echo "Best School"
+    
+    if [ $i == 9 ] 
+    then
+        echo "Hi"
+    fi
+    
+    i=$(($i+1))
+done
