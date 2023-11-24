@@ -15,6 +15,5 @@ if __name__ == "__main__":
     f = open(fname, "a+")
     f.close() 
     obj = load(fname)
-    print(obj)
     obj += argv[1:] 
     save(obj,fname)
