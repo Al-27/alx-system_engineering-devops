@@ -13,5 +13,5 @@ while [ $i -le $end ]; do
         (17)  echo "bad luck from Italy"
     esac
     
-    i=$(($i+1))
+    i=$((i+1))
 done
