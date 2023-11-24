@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+pkill -f -KILL "7-highlander"

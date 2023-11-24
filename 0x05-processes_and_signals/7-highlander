@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+function Nope()
+{
+    echo "I am invincible!!!"
+}
+
+trap Nope SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done

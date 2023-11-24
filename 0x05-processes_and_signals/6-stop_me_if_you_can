@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+pkill -f -TERM "4-to_infinity_and_beyond"
