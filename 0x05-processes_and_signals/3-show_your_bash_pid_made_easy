@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 #echo "give me a bottle of rum!"
 
-res=$(pidof bash)
-
-for id in $res
-do
-    echo $id" bash"
-done
+pgrep -l "bash"
