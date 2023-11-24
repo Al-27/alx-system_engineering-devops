@@ -3,4 +3,4 @@
 
 bpid=$(pgrep -f 4-to_infinity_and_beyond)
 
-kill -SIGTERM $bpid
+kill -SIGTERM "$bpid"
