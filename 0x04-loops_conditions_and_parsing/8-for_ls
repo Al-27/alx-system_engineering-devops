@@ -7,6 +7,7 @@ list=$(ls)
 for li in $list
 do
     #tmp=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
-    tmp=$( grep -Poe "[0-9a-zA-Z]*-\K(.*)" <<< "$li")
+    #tmp=$( grep -Poe "[0-9a-zA-Z]*-\K(.*)" <<< "$li")
+    tmp=$(li)
     echo "$tmp"
 done
