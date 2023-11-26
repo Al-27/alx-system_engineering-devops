@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #echo "give me a bottle of rum!"
-
+# shellcheck disable=SC2086
+ 
 list=$(ls)
 #list=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$list")" )
 
@@ -8,7 +9,7 @@ for li in $list
 do
     #tmp=$( grep -Eod "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
     tmp=$( grep -Poe "[\d\w]+-\K(.*)" <<< "$li")
-    if [ ! -s "$tmp" ]
+    if [ ! -s $tmp ]
     then
         echo "$tmp"
     else
