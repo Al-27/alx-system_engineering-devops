@@ -2,9 +2,10 @@
 #echo "give me a bottle of rum!"
 
 list=$(ls) 
-list=$( grep -Poe "[^-].*" <<< "$(grep -Poe "[^0-9\w].*" <<< "$list")" )
+#list=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$list")" )
 
 for li in $list
 do
-    echo "$li"
+    tmp=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
+    echo "$tmp"
 done
