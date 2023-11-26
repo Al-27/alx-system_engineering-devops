@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #echo "give me a bottle of rum!"
-
+# shellcheck disable=SC2166
 
 hr=0
 min=1 
