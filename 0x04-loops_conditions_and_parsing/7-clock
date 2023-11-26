@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+
+hr=1
+min=1
+echo "Hour:" $hr
+
+while [ $hr -lt 12 ] 
+do
+    
+    echo $min 
+    min=$((min+1))    
+    
+    if  [ $min == 60 ] ;then
+        min=1
+        hr=$((hr+1)) 
+        echo "Hour:" $hr 
+    fi
+    
+done

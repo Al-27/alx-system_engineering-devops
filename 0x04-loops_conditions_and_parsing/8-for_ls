@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+list=$(ls) 
+list=$( grep -Eo "[^-].*" <<< $(grep -Eo "[^0-9].*" <<< $list) )
+
+for li in $list
+do
+    echo $li
+done

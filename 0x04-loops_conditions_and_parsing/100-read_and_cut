@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#echo "give me a bottle of rum!"
+
+while read -r line
+do
+    usr=$( grep -Poe "^.*(?=:x)" <<< $line )
+    id=$( grep -Poe "\d+(?=:\d+)" <<< $line )
+    loc=$( grep -Poe "\/.*(?=:\/.*)" <<< $line )
+    echo $usr:$id:$loc
+done <<< $(cat /etc/passwd )
