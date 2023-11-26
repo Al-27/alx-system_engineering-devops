@@ -6,5 +6,5 @@ do
     usr=$( grep -Poe "^.*(?=:x)" <<< "$line" )
     id=$( grep -Poe "\d+(?=:\d+)" <<< "$line" )
     loc=$( grep -Poe "\/.*(?=:\/.*)" <<< "$line" )
-    echo $usr:$id:$loc
+    echo "$usr":"$id":"$loc"
 done <<< "$(cat /etc/passwd )"
