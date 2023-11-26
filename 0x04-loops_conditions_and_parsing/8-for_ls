@@ -8,7 +8,7 @@ for li in $list
 do
     #tmp=$( grep -Eod "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
     tmp=$( grep -Poe "[\d\w]+-\K(.*)" <<< "$li")
-    if [ ! -s $tmp ]
+    if [ ! -s "$tmp" ]
     then
         echo "$tmp"
     else
