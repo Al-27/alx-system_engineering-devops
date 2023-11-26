@@ -2,7 +2,7 @@
 #echo "give me a bottle of rum!"
 
 
-hr=1
+hr=0
 min=1 
 echo "Hour:" $hr 
 
