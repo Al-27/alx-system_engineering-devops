@@ -2,7 +2,7 @@
 #echo "give me a bottle of rum!"
 
 list=$(ls) 
-list=$( grep -Eo "[^-].*" <<< $(grep -Eo "[^0-9].*" <<< $list) )
+list=$( grep -Eo "[^-].*" <<< $(grep -Eo "[^0-9\w].*" <<< $list) )
 
 for li in $list
 do
