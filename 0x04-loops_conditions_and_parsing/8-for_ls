@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #echo "give me a bottle of rum!"
 
-list=$(ls) 
+list=$(ls)
 #list=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$list")" )
 
 for li in $list
@@ -9,5 +9,5 @@ do
     #tmp=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
     #tmp=$( grep -Poe "[0-9a-zA-Z]*-\K(.*)" <<< "$li")
     tmp=$(li)
-    echo "$tmp"
+    echo "$li"
 done
