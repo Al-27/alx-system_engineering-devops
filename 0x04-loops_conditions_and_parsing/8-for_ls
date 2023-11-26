@@ -6,8 +6,12 @@ list=$(ls)
 
 for li in $list
 do
-    #tmp=$( grep -Eo "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
-    #tmp=$( grep -Poe "[0-9a-zA-Z]*-\K(.*)" <<< "$li")
-    tmp=$(li)
-    echo "$li"
+    #tmp=$( grep -Eod "[^-].*" <<< "$(grep -Eo "[^0-9a-zA-Z].*" <<< "$li")" )
+    tmp=$( grep -Poe "[\d\w]+-\K(.*)" <<< "$li")
+    if [ ! -s $tmp ]
+    then
+        echo "$tmp"
+    else
+        echo "$li"
+    fi
 done
