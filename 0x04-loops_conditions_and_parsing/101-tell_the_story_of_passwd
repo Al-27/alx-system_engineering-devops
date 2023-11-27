@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #echo "give me a bottle of rum!"
+# shellcheck disable=SC2086
+
 tmp=$IFS
 IFS=":"
 while read -r line

@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 #echo "give me a bottle of rum!"
+
+awk {'print $1 " " $9'} apache-access.log 
