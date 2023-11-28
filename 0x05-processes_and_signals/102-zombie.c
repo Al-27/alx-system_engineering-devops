@@ -30,8 +30,11 @@ int main(void)
             child =  fork();
             if(child == 0)
             {
-                printf("Zombie process created, PID: %d", (int)getpid());
                 infinite_while();
+            }
+            else
+            {
+                 printf("Zombie process created, PID: %d", (int)getpid());
             }
         }
     }
