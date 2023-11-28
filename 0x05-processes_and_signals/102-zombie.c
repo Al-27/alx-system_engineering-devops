@@ -21,20 +21,19 @@ int infinite_while(void)
 */
 int main(void)
 {
-    int parenID = (int)getpid(), i = 0;
+    int parenID = (int)getpid(), i = 0, child;
 
     for(;i < 5; i++)
     {
         if(parenID == getpid())
         {
-            fork();
+            child =  fork();
+            if(child == 0)
+            {
+                printf("Zombie process created, PID: %d", (int)getpid());
+                infinite_while();
+            }
         }
-    }
-
-    if(parenID != getpid() )
-    {
-        printf("Zombie process created, PID: %d", (int)getpid());
-        infinite_while();
     }
 
     return (0);
