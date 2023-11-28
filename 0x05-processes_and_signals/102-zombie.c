@@ -34,7 +34,7 @@ int main(void)
             }
             else
             {
-                 printf("Zombie process created, PID: %d", (int)getpid());
+                 printf("Zombie process created, PID: %d\n", child);
             }
         }
     }
