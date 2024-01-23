@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this is a single comment line
+ssh-keygen -t rsa -b 4096 -f school -P "betty"
