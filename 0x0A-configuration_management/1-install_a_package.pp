@@ -1,5 +1,9 @@
 #This is a Comment
+package { 'pyhthon-pip':
+ensure=>"installed"
+}
+
 package { 'flask':
 ensure=>"installed",
-provider=>"pip3"
+provider=>"2.1.0"
 }
