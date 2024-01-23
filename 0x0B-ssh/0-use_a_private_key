@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this is a single comment line
+ssh ubuntu@8.8.8.8
