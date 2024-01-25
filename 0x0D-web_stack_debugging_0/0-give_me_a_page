@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # ... 
+sed -i ‘s/Listen .*/Listen 0.0.0.0:8080/’ /etc/apache2/ports.conf
 service apache2 restart
