@@ -1,8 +1,10 @@
 #this is but a comment
-file { '/etc/ssh':
-  ensure => 'directory',
+file_line{'no pass':
+path => '/etc/ssh/ssh_config',
+line => 'PasswordAuthentication no'
 }
-file{ "/etc/ssh/ssh_config":
-  ensure  => 'present',
-  content => 'HostName *\nIdentityFile ~/.ssh/school\nPasswordAuthentication no',
+file_line{'id':
+path => '/etc/ssh/ssh_config',
+line => 'IdentityFile ~/.ssh/school'
+
 }
