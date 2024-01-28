@@ -1,5 +1,5 @@
 #this is but a comment
-file{ "${facts['home']}/.ssh/ssh_config":
+file{ "/etc/ssh/ssh_config":
   ensure  => 'present',
   owner   => 'root',
   group   => 'root',
