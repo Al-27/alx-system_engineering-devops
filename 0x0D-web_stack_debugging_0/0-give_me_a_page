@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 # ... 
+sudo su
+sed -i 's/Listen .*/Listen 0.0.0.0:8080/' /etc/apache2/ports.conf
 service apache2 restart
+docker run -d --name docker-apache -p 80:80 -d httpd
