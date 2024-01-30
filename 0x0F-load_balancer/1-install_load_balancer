@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2154
+# ... 
+sudo su <<EOF   
+apt update
+apt install -y nginx
+apt install -y haproxy
+echo "
+frontend balancer
+    mode http
+    bind :80
+    defaul_backend mysevers
+backend myservers
+    mode http
+    balance roundrobin
+    server web001 54.162.41.150:80 check 	
+    server web002 54.84.87.76:80 check
+" >> /etc/haproxy/haproxy.cfg
+service nginx restart
+EOF
