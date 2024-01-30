@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2154
+# ... 
+sudo su
+apt update
+apt install -y nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/er404.html
+sed -i "s/\(server_name _;\)/\1\n\tadd_header X-Served-By \$hostname always;\n\terror_page 404 \/er404.html;\n\trewrite ^\/redirect_me https\:\/\/google\.com\/ permanent;/" /etc/nginx/sites-available/default
+service nginx restart
