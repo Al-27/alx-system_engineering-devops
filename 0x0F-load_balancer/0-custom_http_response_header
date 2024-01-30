@@ -3,6 +3,7 @@
 # ... 
 sudo apt update
 sudo apt install -y nginx
+sudo service nginx restart
 sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo echo "Hello World!" > /var/www/html/er404.html
 sudo sed -i "s/\(server_name _;\)/\1\n\tadd_header X-Served-By \$hostname always;\n\terror_page 404 \/er404.html;\n\trewrite ^\/redirect_me https\:\/\/google\.com\/ permanent;/" /etc/nginx/sites-available/default
