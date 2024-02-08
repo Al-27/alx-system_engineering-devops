@@ -2,6 +2,7 @@
 # ... 
 sudo service nginx stop
 sudo apt purge nginx
+sudo rm -r /etc/nginx
 sudo apt update
 sudo apt install nginx -y
 sudo service nginx restart
