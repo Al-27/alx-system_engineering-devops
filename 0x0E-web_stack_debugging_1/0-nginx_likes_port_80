@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 # ... 
-sudo service nginx stop
-sudo apt purge nginx
-sudo rm -r /etc/nginx
-sudo apt update
-sudo apt install nginx -y
-sudo service nginx restart
+sudo rm /etc/nginx/sites-enabled/default
+sudo cp /etc/nginx/sites-available/delfault /etc/nginx/sites-enabled/
+sudo sevice nginx restart
