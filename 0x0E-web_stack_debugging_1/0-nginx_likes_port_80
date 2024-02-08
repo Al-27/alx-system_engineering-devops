@@ -2,4 +2,4 @@
 # ... 
 sudo rm /etc/nginx/sites-enabled/default
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-sudo sevice nginx restart
+sudo service nginx restart
