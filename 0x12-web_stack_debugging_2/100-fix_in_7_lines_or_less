@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #this is comm
-sudo service nginx stop
 sudo sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
-sudo sed -i "s/listen 80/listen 8080/" /etc/nginx/sites-enabled/default 
+sudo sed -i "s/80/8080/" /etc/nginx/sites-enabled/default 
 sudo chown -R nginx /etc/nginx
 sudo -u nginx chmod 744 /etc/nginx/nginx.conf
 pkill apache2
