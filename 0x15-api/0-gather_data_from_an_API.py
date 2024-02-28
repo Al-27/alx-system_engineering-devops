@@ -6,18 +6,16 @@
 from requests import get
 from sys import argv
 
-if __name__ == '__main__':
-    main_url = 'https://jsonplaceholder.typicode.com'
-    todo = main_url + "/user/{}/todos".format(argv[1])
-    name = main_url + "/users/{}".format(argv[1])
-    todo_rslt = get(todo).json()
-    name_rslt = get(name).json()
+if __name__ == '__main__': 
+    todo_rslt = get(f'https://jsonplaceholder.typicode.com/user/{argv[1]}/todos').json()
+    user = get(f'https://jsonplaceholder.typicode.com/users/{argv[1]}').json()
 
     todo_num = len(todo_rslt)
-    todo_cmplt = len([todo for todo in todo_rslt
-                         if todo.get("completed")])
-    name = name_rslt.get("name")
+    cmp_todo = []
+    for td in todo_rslt:
+        if td.get("completed"):
+            cmp_todo.append(td.get("title"))
+    name = user.get("name")
     print(f"Employee {name} is done with tasks({todo_cmplt}/{todo_num}):")
-    for todo in todo_rslt:
-        if (todo.get("completed")):
-            print(f'\t {todo.get("title")}')
+    for todo in cmp_todo:
+        print(f'\t {todo}')
