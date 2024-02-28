@@ -6,8 +6,9 @@
 from requests import get
 from sys import argv
 
-if __name__ == '__main__': 
-    todo_rslt = get(f'https://jsonplaceholder.typicode.com/user/{argv[1]}/todos').json()
+if __name__ == '__main__':
+    todo_rslt = get(
+        f'https://jsonplaceholder.typicode.com/user/{argv[1]}/todos').json()
     user = get(f'https://jsonplaceholder.typicode.com/users/{argv[1]}').json()
 
     todo_num = len(todo_rslt)

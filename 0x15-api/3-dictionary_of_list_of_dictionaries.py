@@ -12,8 +12,10 @@ if __name__ == "__main__":
     for user in users:
         todo_list = []
 
-        todo_r = get(f"https://jsonplaceholder.typicode.com/user/{user.get('id')}/todos").json()
-        user_r = get(f"https://jsonplaceholder.typicode.com/users/{user.get('id')}").json()
+        todo_r = get(
+            f"https://jsonplaceholder.typicode.com/user/{user.get('id')}/todos").json()
+        user_r = get(
+            f"https://jsonplaceholder.typicode.com/users/{user.get('id')}").json()
         for todo in todo_r:
             todo_dict = {}
             todo_dict.update({"username": user_r.get("username"),

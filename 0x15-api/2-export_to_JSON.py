@@ -12,9 +12,8 @@ if __name__ == "__main__":
 
     l_todo = []
     for todo in todos:
-        d_todo = {}
-        d_todo.update({"task": todo.get("title"), "completed": todo.get(
-            "completed"), "username": users.get("username")})
+        d_todo = {"task": todo.get("title"), "completed": todo.get(
+            "completed"), "username": users.get("username")}
         l_todo.append(d_todo)
 
     with open(f"{argv[1]}.json", 'w') as f:
