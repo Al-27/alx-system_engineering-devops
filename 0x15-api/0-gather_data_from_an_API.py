@@ -16,6 +16,6 @@ if __name__ == '__main__':
         if td.get("completed"):
             cmp_todo.append(td.get("title"))
     name = user.get("name")
-    print(f"Employee {name} is done with tasks({todo_cmplt}/{todo_num}):")
+    print(f"Employee {name} is done with tasks({len(cmp_todo)}/{todo_num}):")
     for todo in cmp_todo:
         print(f'\t {todo}')
