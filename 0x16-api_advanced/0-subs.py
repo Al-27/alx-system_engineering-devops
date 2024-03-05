@@ -12,6 +12,3 @@ def number_of_subscribers(subreddit):
         return subs if subs is not None else 0
     except Exception :
         return 0
-    
-if __name__ == "__main__":
-    print(number_of_subscribers(argv[1]))
