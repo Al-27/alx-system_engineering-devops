@@ -6,29 +6,9 @@ import requests
 from sys import argv
 
 def number_of_subscribers(subreddit):
-    """ Returns subscriber count of subreddit or 0 """
-    from requests import get
-
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-
-    headers = {'user-agent': 'my-app/0.0.1'}
-
-    r = get(url, headers=headers, allow_redirects=False)
-
-    if r.status_code != 200:
-        return 0
-
+    resp = requests.get(f"https://api.reddit.com/r/{subreddit}/about", headers = {"HTTP_USER_AGENT": "chrome/10.0.0.1"} ,allow_redirects=False)
     try:
-        js = r.json()
-
-    except ValueError:
+        subs = resp.json().get('data').get('subscribers')
+        return subs if subs is not None else 0
+    except Exception :
         return 0
-
-    data = js.get("data")
-
-    if data:
-        sub_count = data.get("subscribers")
-        if sub_count:
-            return sub_count
-
-    return 0
