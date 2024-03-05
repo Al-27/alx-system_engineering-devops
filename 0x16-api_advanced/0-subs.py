@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+this is a doc
+"""
 import requests
 from sys import argv
 
