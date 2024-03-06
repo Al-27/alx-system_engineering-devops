@@ -17,4 +17,4 @@ def top_ten(subreddit):
             data = p.get('data')
             print(data.get('title'))
     except Exception as e: 
-        print(e)
+        print("None")
