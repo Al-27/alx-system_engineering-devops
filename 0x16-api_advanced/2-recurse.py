@@ -6,8 +6,9 @@ import requests
 
 
 def recurse(subreddit):
-    resp = requests.get(f"https://api.reddit.com/r/{subreddit}/hot?limit=100",
-            headers={"HTTP_USER_AGENT": "checker:10.0.alx"}, allow_redirects=False)
+    url = f"https://api.reddit.com/r/{subreddit}/hot?limit=100"
+    hdrs = {"HTTP_USER_AGENT": "checker:10.0.alx"}
+    resp = requests.get(url ,headers=hdrs, allow_redirects=False)
     if resp.status_code != 200:
         return None
     try:
