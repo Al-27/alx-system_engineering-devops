@@ -3,13 +3,12 @@
 this is a doc
 """
 import requests
-from sys import argv
 
 def top_ten(subreddit):
-    resp = requests.get(f"https://api.reddit.com/r/{subreddit}/hot", headers = {"HTTP_USER_AGENT": "chrome/10.0.0.1"} ,allow_redirects=False)
+    resp = requests.get(f"https://api.reddit.com/r/{subreddit}/hot", headers = {"HTTP_USER_AGENT": "checker:10.0.alx"} ,allow_redirects=False)
     if resp.status_code != 200:
         print("None")
-        return
+        return None
     
     try:
         posts = resp.json().get("data").get("children")
@@ -18,3 +17,4 @@ def top_ten(subreddit):
             print(data.get('title'))
     except Exception as e: 
         print("None")
+
