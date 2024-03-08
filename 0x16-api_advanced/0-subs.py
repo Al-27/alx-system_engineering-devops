@@ -6,6 +6,7 @@ import requests
 from sys import argv
 
 def number_of_subscribers(subreddit):
+    print(subreddit)
     resp = requests.get(f"https://api.reddit.com/r/{subreddit}/about", headers = {"HTTP_USER_AGENT": "chrome/10.0.0.1"} ,allow_redirects=False)
     try:
         subs = resp.json().get('data').get('subscribers')
