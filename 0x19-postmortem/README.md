@@ -1,9 +1,12 @@
-
-	11:26-am-GMT until 12:45-pm-GMT, the server always respond with status code 500, regardless of page requested. 100% of users reported the issue of website not returning requested page.
-	after debugging the issue, it was found that during a commit in which we update the wordpress settings, one of the interns added a letter to a php file suffix, which lead PHP not being able to find the file and returning a server failute.
+# Summary:
+	11:26-am-GMT until 12:45-pm-GMT, the server always respond with status code 500, regardless of page requested. 
+	100% of users reported the issue of website not returning requested page.
+	after debugging the issue, it was found that during a commit in which we update the wordpress settings, 
+ 	one of the interns added a letter to a php file suffix, 
+	which lead PHP not being able to find the file and returning a server failute.
 	
-Timeline:
-	11:22-am-GMT - Modifying Wordpress Settings and commiting the changes.
+# Timeline:
+	 11:22-am-GMT - Modifying Wordpress Settings and commiting the changes.
 	11:26-am-GMT - Users Complain they're not able to access some pages in the website.
 	11:30-am-GMT - Checking with the Monitoring staff to see if the server is up and running.
 	12:05-pm-GMT - After ensuring hardware is in great shape, we start to debug the website itself.
