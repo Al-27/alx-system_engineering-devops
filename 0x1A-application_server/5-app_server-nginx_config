@@ -89,7 +89,7 @@ http {
 		}
         
         location /airbnb-dynamic/number_odd_or_even/ {
-		    rewrite /airbnb-dynamic/number_odd_or_even/(.*) /number/$1 break;
+		    rewrite /airbnb-dynamic/(.*) /$1 break;
             try_files $uri @proxy_5001_app;
 	
         }
