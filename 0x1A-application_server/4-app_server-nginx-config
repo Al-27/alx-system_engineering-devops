@@ -84,6 +84,11 @@ http {
             try_files $uri @proxy_5001_app;
 	
         }
+        
+        location /api/ {
+            try_files $uri @proxy_5002_app;
+	
+        }
 		
 		location @proxy_5000_app {
 			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -99,6 +104,14 @@ http {
 			proxy_set_header Host $http_host;
 			proxy_redirect off;
 			proxy_pass http://0.0.0.0:5001;
+		}
+        
+        location @proxy_5002_app {
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header X-Forwarded-Proto $scheme;
+			proxy_set_header Host $http_host;
+			proxy_redirect off;
+			proxy_pass http://0.0.0.0:5002;
 		}
 	}	
 }
